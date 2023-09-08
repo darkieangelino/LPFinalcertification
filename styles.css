@@ -1,0 +1,145 @@
+/* Set black background and white text for all pages */
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif; /* Change font to Arial (or any desired font) */
+}
+
+/* Style the menu links */
+.menu-links {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+/* Style the login button and other menu links */
+.menu-links .button {
+  font-size: 12px;
+  padding: 5px 10px;
+  background-color: black; /* Set the background color to black */
+  color: white; /* Set the text color to white */
+  border: none;
+  cursor: pointer;
+  margin-left: 10px; /* Add some space between the buttons */
+}
+
+/* Style the brand name */
+.brand-name {
+  font-size: 50px;
+  color: white;
+  padding: 10px;
+}
+
+/* Style the button */
+.button {
+  font-size: 30px;
+  padding: 20px 50px; /* Adjust the padding to control spacing around the button */
+  background-color: white;
+  color: black;
+  border: none;
+  cursor: pointer;
+}
+
+/* Center elements vertically and horizontally */
+.center-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  text-align: center;
+}
+
+/* Style the cart items */
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+}
+
+/* Style the welcome text */
+.info {
+  font-size: 18px; /* Change the font size */
+  margin-bottom: 20px; /* Add space below the welcome text */
+}
+
+/* Style the login form */
+.login-form {
+  background-color: #333; /* Blue background color */
+  padding: 50px;
+  border-radius:20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style the labels for the email and password input fields */
+.login-form label {
+  display: block;
+  font-size: 20px;
+  margin-bottom: 5px;
+}
+
+/* Style the email and password input fields */
+.login-form input[type="email"],
+.login-form input[type="password"] {
+  width: 100%;
+  padding: 10px;
+  font-size: 18px;
+  margin-bottom: 15px;
+  border: none;
+  border-radius: 3px;
+}
+
+/* Style the login button */
+.login-form input[type="submit"] {
+  width: 70%;
+}
+
+/* Style the product list */
+.product-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+/* Style each product item */
+.product {
+  width: 30%;
+  background-color: #333;
+  padding: 20px;
+  margin-bottom: 20px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+/* Style product title */
+.product h3 {
+  font-size: 24px;
+  color: white;
+  margin-bottom: 10px;
+}
+
+/* Style product description */
+.product p {
+  font-size: 18px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Style product price */
+.product .price {
+  font-size: 20px;
+  color: white;
+  margin-bottom: 15px;
+}
+
+/* Style Add to Cart button */
+.product .add-to-cart {
+  font-size: 20px;
+  padding: 10px 20px;
+  background-color: #0074D9;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+}

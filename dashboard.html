@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Dashboard - LP Brand Store</title>
+    <link rel="stylesheet" type="text/css" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="brand-name">LP Brand Store</div>
+        <div class="menu-links">
+            <a href="index.html" class="button">Home</a>
+            <a href="products.html" class="button">Shop</a>
+            <a href="dashboard.html" class="button" id="user-dashboard">User Dashboard</a>
+            <a href="cart.html" class="button" id="cart-button">View Cart (0)</a>
+        </div>
+    </header>
+    <main>
+        <div class="center-content">
+            <h2>User Dashboard</h2>
+            <div class="user-profile">
+                <h3>Welcome, <span id="user-first-name"></span>!</h3>
+                <p>Here is your user information:</p>
+                <ul>
+                    <li><strong>Name:</strong> <span id="user-name"></span></li>
+                    <!-- Add more user information fields as needed -->
+                </ul>
+                <h3>Your Orders</h3>
+                <div id="user-orders">
+                    <!-- Order details will be dynamically filled here -->
+                </div>
+            </div>
+        </div>
+    </main>
+    <script>
+        // Simulated user authentication
+        const authenticatedUser = {
+            firstName: "John",
+            lastName: "Doe",
+            orders: [
+                { id: 1, product: "Royal Gulfaam Men's Shirt", quantity: 2, total: 39.98 },
+                { id: 2, product: "Product 2", quantity: 1, total: 24.99 },
+                // Add more orders as needed
+            ]
+        };
+
+        // Function to update user information in the dashboard
+        function updateUserDashboard() {
+            const userFirstName = document.getElementById("user-first-name");
+            const userName = document.getElementById("user-name");
+            const userOrders = document.getElementById("user-orders");
+
+            if (authenticatedUser) {
+                // Show user's first name
+                userFirstName.textContent = authenticatedUser.firstName;
+                userName.textContent = `${authenticatedUser.firstName} ${authenticatedUser.lastName}`;
+                userOrders.innerHTML = "<p>Your recent orders:</p>";
+                for (const order of authenticatedUser.orders) {
+                    const orderItem = document.createElement("div");
+                    orderItem.className = "order-item";
+                    orderItem.innerHTML = `
+                        <p>Order ID: ${order.id}</p>
+                        <p>Product: ${order.product}</p>
+                        <p>Quantity: ${order.quantity}</p>
+                        <p>Total: $${order.total.toFixed(2)}</p>
+                        <hr>
+                    `;
+                    userOrders.appendChild(orderItem);
+                }
+            } else {
+                // User not authenticated, hide user dashboard elements
+                userFirstName.textContent = "";
+                userName.textContent = "";
+                userOrders.textContent = "Please log in to view your orders.";
+            }
+        }
+
+        // Update user dashboard on page load
+        updateUserDashboard();
+    </script>
+</body>
+</html>
